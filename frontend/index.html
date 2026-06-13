@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SafeHive — Multi-Agent AI Security Sandbox simulating food ordering with real-time threat detection." />
+  <title>SafeHive — AI Security Sandbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- ───── Ambient background glow ───── -->
+  <div class="ambient-glow ambient-glow--1"></div>
+  <div class="ambient-glow ambient-glow--2"></div>
+
+  <!-- ───── Header ───── -->
+  <header id="app-header">
+    <div class="header-content">
+      <div class="logo-group">
+        <div class="logo-icon">🛡️</div>
+        <div>
+          <h1>SafeHive</h1>
+          <p class="tagline">Multi-Agent AI Security Sandbox</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="pulse-dot"></span>
+        <span>Live Simulation</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───── Main content ───── -->
+  <main id="app-main">
+
+    <!-- Order input section -->
+    <section id="order-section" class="glass-card">
+      <h2 class="section-title">What would you like to order?</h2>
+      <div class="input-row">
+        <div class="input-wrapper">
+          <span class="input-icon">🔍</span>
+          <input
+            type="text"
+            id="user-input"
+            placeholder="e.g. I want a large pepperoni pizza under $15"
+            autocomplete="off"
+          />
+        </div>
+        <button id="order-btn" type="button">
+          <span class="btn-text">Order</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+      <div class="quick-tests">
+        <span class="quick-label">Quick tests:</span>
+        <button class="quick-btn" data-query="I want a pizza">🍕 Pizza</button>
+        <button class="quick-btn" data-query="I want a burger with fries">🍔 Burger</button>
+        <button class="quick-btn" data-query="I want chips">🐟 Chips</button>
+        <button class="quick-btn" data-query="I want a healthy salad">🥗 Salad</button>
+        <button class="quick-btn" data-query="I want nachos">🌮 Nachos</button>
+      </div>
+    </section>
+
+    <!-- Loading state -->
+    <section id="loading-section" class="glass-card hidden">
+      <div class="loader-container">
+        <div class="loader-ring">
+          <div class="loader-ring-inner"></div>
+        </div>
+        <div class="loader-text">
+          <p class="loader-title">Agents working...</p>
+          <p class="loader-sub" id="loader-status">Selecting vendor &amp; initializing agents</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversation feed -->
+    <section id="conversation-section" class="hidden">
+      <h2 class="section-title feed-title">
+        <span>Conversation Feed</span>
+        <span id="vendor-badge" class="vendor-badge"></span>
+      </h2>
+      <div id="conversation-feed"></div>
+    </section>
+
+    <!-- Status bar -->
+    <section id="status-section" class="hidden">
+      <div id="status-bar" class="glass-card status-card"></div>
+    </section>
+
+  </main>
+
+  <!-- ───── Footer ───── -->
+  <footer id="app-footer">
+    <p>SafeHive &copy; 2025 &mdash; AI Security Research &amp; Training Platform</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
