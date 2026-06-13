@@ -186,12 +186,6 @@ Contributions are welcome. Feel free to open issues and submit pull requests.
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
 ## ⭐ Support
 
 If you find this project useful, consider giving it a star on GitHub.
